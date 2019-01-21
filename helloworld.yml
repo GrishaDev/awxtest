@@ -1,0 +1,9 @@
+- name: a test
+  hosts: all
+  become: yes
+  tasks:
+
+  - name: create file at '/tmp/test.txt' with string 'hello'
+    copy:
+      content: "hello\n"
+      dest: /tmp/test.txt
